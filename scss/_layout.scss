@@ -1,0 +1,114 @@
+.card {
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card__img {
+  background-image: url(/images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  padding: 3rem 5rem;
+
+  &__title {
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    color: hsl(214, 17%, 51%);
+    margin-bottom: 2rem;
+  }
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__avatar img {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__desc {
+    h3 {
+      color: hsl(217, 19%, 35%);
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      color: hsl(214, 17%, 51%);
+    }
+  }
+}
+
+.share {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  padding: 1.06rem 1.2rem;
+}
+
+.share:hover {
+  cursor: pointer;
+}
+
+.profile__links {
+  display: none;
+  top: -130%;
+  right: -20.5%;
+  position: absolute;
+  border-radius: 1rem;
+  align-items: center;
+  width: fit-content;
+  padding: 1.1rem 3.5rem 1.1rem 3.5rem;
+  background-color: hsl(217, 19%, 35%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  h4 {
+    color: hsl(212, 23%, 69%);
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.profile__links::before {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 80%);
+  background-color: hsl(217, 19%, 35%);
+  clip-path: polygon(100% 0, 50% 50%, 0 0);
+}
+
+.social__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: space-between;
+
+  a {
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    transform: scale(1.2, 1.2);
+  }
+}
